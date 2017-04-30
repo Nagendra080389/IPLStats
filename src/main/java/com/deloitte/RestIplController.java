@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -57,5 +58,14 @@ public class RestIplController {
         });
         Gson gson = new GsonBuilder().create();
         return gson.toJson(matchesNumberBySeason);
+    }
+
+    @RequestMapping(value = "/toseasonPage")
+    public ModelAndView seasonPage(@RequestParam String season, ModelAndView modelAndView){
+        modelAndView.addObject("numberOfMatchesPerSeason", 5);
+        modelAndView.addObject("seasons", season);
+        modelAndView.setViewName("seasonPage.html");
+
+        return modelAndView;
     }
 }

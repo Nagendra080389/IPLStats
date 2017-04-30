@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Season Page </title>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/carousel_css.css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="../js/googleChart.js"></script>
+
+<body>
+
+
+<div>
+    <li>
+        <select onChange="changeMatchNumber()" id="ipl_Seasons" class='nav-contents'>
+            <option disabled selected value> -- select an option --</option>
+            <option value="2008">IPL Season 2008</option>
+            <option value="2009">IPL Season 2009</option>
+            <option value="2010">IPL Season 2010</option>
+            <option value="2011">IPL Season 2011</option>
+            <option value="2012">IPL Season 2012</option>
+            <option value="2013">IPL Season 2013</option>
+            <option value="2014">IPL Season 2014</option>
+            <option value="2015">IPL Season 2015</option>
+            <option value="2016">IPL Season 2016</option>
+        </select>
+
+        <select id="matches_Number" onchange="init()" class='nav-contents'></select>
+    </li>
+</div>
+
+<div id="results_div">
+</div>
+
+<div id="chart_div"></div>
+
+<div id="columns_chart_div"></div>
+
+</body>
+</html>
